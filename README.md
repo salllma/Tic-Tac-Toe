@@ -1,2 +1,2 @@
 # Tic-Tac-Toe
-The classic Tic-Tac-Toe in c language 
+The classic game Tic-Tac-Toe in c language 
