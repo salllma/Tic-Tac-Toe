@@ -1,9 +1,11 @@
+#include<stdio.h>
 #ifndef MAIN_H
 #define MAIN_H
 
 
- void Init_board(int *board);
- void Print_board(int *board);
+int Init_board(int *board);
+
+const int Print_board(const int *board);
  
 
  #endif
