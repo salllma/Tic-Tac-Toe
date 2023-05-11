@@ -13,35 +13,40 @@ const int ConvertTo25[] =
 	16,17,18
 };
 
-int Init_board(int *board)
+int Init_board(int board[][5])
 {
-	int index = 0;
-    int i;
+    int i, j;
 
-	for ( i = 0; i < 25; ++i)
-		board[i] = BOARDER;
-
-	for ( i = 0; i < 9; ++i)	
-		board[ConvertTo25[i]] = EMPTY;	
+    for (i = 0; i < 5; ++i) {
+        for (j = 0; j < 5; ++j) {
+            if (i == 0 || i == 4 || j == 0 || j == 4) {
+                board[i][j] = BOARDER;
+            } else {
+                board[i][j] = EMPTY;
+            }
+        }
+    }
 }
 
-const int Print_board(const int *board) 
+
+const int Print_board(const int board[][5])
 {
-	int index = 0;
-	printf("\nBoard:\n");
-	for(index = 0; index < 25; ++index) {
-		if(index!=0 && index%5==0) {
-			printf("\n");
-		}
-		printf("%4d",board[index]);
-	}
-	printf("\n");
+    int i, j;
+    printf("\nBoard:\n");
+    for(i = 0; i < 5; ++i) {
+        for(j = 0; j < 5; ++j) {
+            printf("%4d",board[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }
+
 
 int main (void)
 {
 
-int board[25];
+int board[5][5];
 
 Init_board(board);
 

@@ -3,9 +3,9 @@
 #define MAIN_H
 
 
-int Init_board(int *board);
+int Init_board(int board[][5]);
 
-const int Print_board(const int *board);
+const int Print_board(const int [][5]);
  
 
  #endif
