@@ -13,7 +13,7 @@ const int ConvertTo25[] =
 	16,17,18
 };
 
-int Init_board(int board[][5])
+void Init_board(int board[][5])
 {
     int i, j;
 
